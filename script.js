@@ -26,9 +26,9 @@ navToggle.addEventListener('click', () => {
 });
 
 // ---------- Tab switching (each section fills the viewport) ----------
-const tabIds = ['about', 'experience', 'education', 'work', 'skills', 'contact'];
+const tabIds = ['home', 'about', 'experience', 'education', 'work', 'skills'];
 const panels = document.querySelectorAll('.tab-panel');
-const navAnchors = document.querySelectorAll('[data-nav]');
+const navAnchors = document.querySelectorAll('.nav-links a[data-nav]');
 const dots = document.querySelectorAll('[data-nav-dot]');
 const navIndicator = document.getElementById('navIndicator');
 
@@ -39,7 +39,7 @@ function moveIndicator(link) {
 }
 
 function switchTab(id, updateHash = true) {
-  if (!tabIds.includes(id)) id = 'about';
+  if (!tabIds.includes(id)) id = 'home';
 
   panels.forEach(p => p.classList.toggle('active', p.id === id));
   navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
@@ -73,7 +73,7 @@ dots.forEach(dot => {
 });
 
 window.addEventListener('popstate', () => {
-  switchTab(window.location.hash.slice(1) || 'about', false);
+  switchTab(window.location.hash.slice(1) || 'home', false);
 });
 
 window.addEventListener('resize', () => {
@@ -149,7 +149,7 @@ function animateStats(container) {
     requestAnimationFrame(tick);
   });
 }
-animateStats(document.getElementById('about'));
+animateStats(document.getElementById('home'));
 
 // ---------- Card tilt + spotlight ----------
 document.querySelectorAll('.card').forEach(card => {
@@ -176,24 +176,6 @@ timelineToggle.addEventListener('click', () => {
   timelinePanel.style.maxHeight = isOpen ? '0px' : timelinePanel.scrollHeight + 'px';
 });
 
-// ---------- Contact form (mailto handoff, no backend) ----------
-const contactForm = document.getElementById('contactForm');
-const formNote = document.getElementById('formNote');
-
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const name = contactForm.name.value.trim();
-  const email = contactForm.email.value.trim();
-  const message = contactForm.message.value.trim();
-
-  const subject = encodeURIComponent(`Portfolio contact from ${name}`);
-  const body = encodeURIComponent(`${message}\n\n${name} (${email})`);
-  window.location.href = `mailto:2005nhathuy@gmail.com?subject=${subject}&body=${body}`;
-
-  formNote.textContent = 'Opening your email client...';
-  contactForm.reset();
-});
-
 // ---------- Init ----------
-switchTab(window.location.hash.slice(1) || 'about', false);
+switchTab(window.location.hash.slice(1) || 'home', false);
 window.addEventListener('load', () => moveIndicator(document.querySelector('.nav-links a.active')));

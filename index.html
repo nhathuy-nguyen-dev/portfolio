@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nhat-Huy Nguyen | Portfolio</title>
 <meta name="description" content="Nhat-Huy Nguyen, software developer with a focus on UX, currently studying Applied Computer Technology at OsloMet.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23bd6a37%22/><text x=%2250%22 y=%2266%22 font-size=%2250%22 font-family=%22sans-serif%22 font-weight=%22700%22 fill=%22%23f3ebd9%22 text-anchor=%22middle%22>N</text></svg>">
+<link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
@@ -15,14 +15,14 @@
 
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a href="#about" class="nav-name" data-nav>Nhat-Huy Nguyen</a>
+    <a href="#home" class="nav-name" data-nav>Nhat-Huy Nguyen</a>
     <nav class="nav-links" id="navLinks">
-      <a href="#about" data-nav class="active">About</a>
+      <a href="#home" data-nav class="active">Home</a>
+      <a href="#about" data-nav>About</a>
       <a href="#experience" data-nav>Experience</a>
       <a href="#education" data-nav>Education</a>
       <a href="#work" data-nav>Work</a>
       <a href="#skills" data-nav>Skills</a>
-      <a href="#contact" data-nav>Contact</a>
       <span class="nav-indicator" id="navIndicator"></span>
     </nav>
     <div class="nav-right">
@@ -38,8 +38,8 @@
 
 <main class="viewport" id="viewport">
 
-  <!-- ABOUT -->
-  <section class="tab-panel active" id="about">
+  <!-- HOME -->
+  <section class="tab-panel active" id="home">
     <div class="wrap hero-inner">
       <div class="hero-photo">
         <div class="photo-frame">
@@ -48,55 +48,64 @@
       </div>
 
       <div class="hero-copy">
-        <p class="eyebrow">Oslo, Norway</p>
+        <p class="eyebrow">Hello, welcome to my portfolio</p>
         <h1>Nhat-Huy Nguyen</h1>
         <p class="role-tag">Student, Developer &amp; Entrepreneur</p>
         <p class="typing-line">I build <span class="typing" id="typing"></span><span class="cursor">|</span></p>
 
         <p class="bio">
           I'm a developer working mainly in <strong>software development</strong> and <strong>UX</strong>,
-          currently at <strong>Renow AS</strong>. I'm also genuinely curious about the wider world of
-          technology and enjoy deepening my skills in new areas outside my main lane.
+          currently at <strong>Renow AS</strong>.
         </p>
 
         <div class="cta-row">
+          <a href="#work" data-nav class="btn btn-outline">My work</a>
           <a href="resume/CV2026.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-gradient">View my resume</a>
+        </div>
+
+        <div class="cta-row">
           <a href="https://www.linkedin.com/in/nhat-huy-nguyen-6588083a5/" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="LinkedIn profile">
             <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
           </a>
           <a href="https://github.com/nhathuy-nguyen-dev" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub profile">
             <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M12 .5c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.3-5.467-1.332-5.467-5.93 0-1.31.469-2.38 1.236-3.22-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.118 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.807 5.625-5.48 5.92.43.372.814 1.103.814 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.696.825.578C20.565 22.295 24 17.797 24 12.5c0-6.627-5.373-12-12-12z"/></svg>
           </a>
+          <a href="mailto:2005nhathuy@gmail.com" class="icon-btn" aria-label="Email me">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M2 4h20v16H2V4zm2 2.236V6h.001L12 12.5l7.999-6.264V6H4zM20 8.107l-7.386 5.788a1 1 0 01-1.228 0L4 8.107V18h16V8.107z"/></svg>
+          </a>
         </div>
-
-        <ul class="link-row">
-          <li><a href="mailto:2005nhathuy@gmail.com">2005nhathuy@gmail.com</a></li>
-          <li><a href="tel:+4740054501">+47 400 54 501</a></li>
-        </ul>
 
         <div class="stats-grid">
           <div class="stat"><span class="stat-num" data-target="3">0</span><span class="stat-label">Languages spoken</span></div>
           <div class="stat"><span class="stat-num" data-target="4">0</span><span class="stat-label">Featured projects</span></div>
           <div class="stat"><span class="stat-num" data-target="3">0</span><span class="stat-label">Semester at OsloMet</span></div>
-          <div class="stat"><span class="stat-num" data-target="2027">0</span><span class="stat-label">Target internship year</span></div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="wrap story-block">
-      <h2 class="grad-heading">My story</h2>
-      <p class="story-text">
-        I'm 21 years old, originally from Trondheim, and moved to Oslo to study Applied Computer Technology
-        at OsloMet. I got my first taste of programming through the IT1 course in my final year of
-        videregående. Since then it's been a rollercoaster, but the real turning point came when I started
-        university and decided to take programming seriously.
-      </p>
-      <p class="story-text">
-        Through my studies I've developed a strong interest in programming, web development and digital
-        solutions. Alongside my studies I work at Renow AS, where I contribute with SEO, client contact,
-        marketing and adapting digital solutions. I'm motivated by learning new technologies, solving
-        problems and putting what I know to work in practical projects.
-      </p>
+  <!-- ABOUT -->
+  <section class="tab-panel" id="about">
+    <div class="wrap about-grid">
+      <div class="about-photo">
+        <img src="aboutme.png" alt="Nhat-Huy talking with a recruiter at a career fair">
+        <p class="photo-caption">At a career fair, talking tech and opportunities.</p>
+      </div>
+      <div class="story-block">
+        <h2 class="grad-heading">About me</h2>
+        <p class="story-text">
+          I'm 21 years old, originally from Trondheim, and moved to Oslo to study Applied Computer Technology
+          at OsloMet. I got my first taste of programming through the IT1 course in my final year of
+          videregående. Since then it's been a rollercoaster, but the real turning point came when I started
+          university and decided to take programming seriously.
+        </p>
+        <p class="story-text">
+          Through my studies I've developed a strong interest in programming, web development and digital
+          solutions. Alongside my studies I work at Renow AS, where I contribute with SEO, client contact,
+          marketing and adapting digital solutions. I'm motivated by learning new technologies, solving
+          problems and putting what I know to work in practical projects.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -408,32 +417,6 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="tab-panel" id="contact">
-    <div class="wrap split-inner">
-      <div class="split-content">
-        <h2 class="grad-heading">Get in touch</h2>
-        <p class="bio">Open to a Summer Internship 2027 in UX Design or Software Development, or just a chat about a project. Reach out and I'll get back to you.</p>
-        <ul class="contact-list">
-          <li><span>Email</span><a href="mailto:2005nhathuy@gmail.com">2005nhathuy@gmail.com</a></li>
-          <li><span>Phone</span><a href="tel:+4740054501">+47 400 54 501</a></li>
-          <li><span>Location</span><a>Oslo, Norway</a></li>
-          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/nhat-huy-nguyen-6588083a5/" target="_blank" rel="noopener noreferrer">nhat-huy-nguyen</a></li>
-          <li><span>GitHub</span><a href="https://github.com/nhathuy-nguyen-dev" target="_blank" rel="noopener noreferrer">nhathuy-nguyen-dev</a></li>
-          <li><span>Resume</span><a href="resume/CV2026.pdf" target="_blank" rel="noopener noreferrer">View PDF</a></li>
-        </ul>
-      </div>
-      <div class="split-content">
-        <form class="contact-form" id="contactForm">
-          <label>Name<input type="text" name="name" required></label>
-          <label>Email<input type="email" name="email" required></label>
-          <label>Message<textarea name="message" rows="5" required></textarea></label>
-          <button type="submit" class="btn btn-gradient" id="sendBtn">Send message</button>
-          <p class="form-note" id="formNote"></p>
-        </form>
-      </div>
-    </div>
-  </section>
 
 </main>
 
@@ -441,12 +424,12 @@
   <div class="wrap footer-inner">
     <p>© 2026 Nhat-Huy Nguyen</p>
     <div class="dot-nav" id="dotNav">
-      <button class="dot active" data-nav-dot="about" aria-label="Go to About"></button>
+      <button class="dot active" data-nav-dot="home" aria-label="Go to Home"></button>
+      <button class="dot" data-nav-dot="about" aria-label="Go to About"></button>
       <button class="dot" data-nav-dot="experience" aria-label="Go to Experience"></button>
       <button class="dot" data-nav-dot="education" aria-label="Go to Education"></button>
       <button class="dot" data-nav-dot="work" aria-label="Go to Work"></button>
       <button class="dot" data-nav-dot="skills" aria-label="Go to Skills"></button>
-      <button class="dot" data-nav-dot="contact" aria-label="Go to Contact"></button>
     </div>
   </div>
 </footer>
