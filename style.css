@@ -140,18 +140,18 @@ h1 { line-height: 1.04; letter-spacing: -0.03em; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
 /* ---------- Home tab ---------- */
-.hero-inner { display: grid; grid-template-columns: 250px 1fr; gap: var(--s-48); align-items: start; }
+.hero-inner { display: grid; grid-template-columns: 280px 1fr; gap: var(--s-48); align-items: start; }
 
 .hero-photo { display: flex; flex-direction: column; align-items: center; gap: var(--s-16); }
 /* No overflow:hidden here. It used to clip the dashed ring below, which sits
    at inset:-12px and so never rendered at all. The image carries the rounding
    itself instead. */
-.photo-frame { position: relative; width: 190px; height: 190px; border-radius: 24px; border: 1px solid var(--border); }
+.photo-frame { position: relative; width: 240px; height: 240px; border-radius: 24px; border: 1px solid var(--border); }
 .photo-frame img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: inherit; }
 .photo-frame::after {
   content: ''; position: absolute; inset: -12px; pointer-events: none;
   border: 2px dashed color-mix(in oklab, var(--accent-warm) 45%, transparent);
-  border-radius: 34px; animation: spin 26s linear infinite;
+  border-radius: 36px; animation: spin 26s linear infinite;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
