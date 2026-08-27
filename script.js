@@ -1,3 +1,7 @@
+// The tab shell owns scroll position: every tab starts at its own top, so
+// neither the browser's restore nor a fragment jump should move the page.
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
 // ---------- Theme toggle ----------
 const root = document.documentElement;
 const themeToggle = document.getElementById('themeToggle');
@@ -31,9 +35,12 @@ const panels = document.querySelectorAll('.tab-panel');
 const navAnchors = document.querySelectorAll('.nav-links a[data-nav]');
 const dots = document.querySelectorAll('[data-nav-dot]');
 const navIndicator = document.getElementById('navIndicator');
+// Single source of truth for the nav-collapse breakpoint; must match the
+// max-width: 760px query in style.css.
+const navIsCollapsed = window.matchMedia('(max-width: 760px)');
 
 function moveIndicator(link) {
-  if (!link || window.innerWidth <= 640) return;
+  if (!link || navIsCollapsed.matches) return;
   navIndicator.style.left = link.offsetLeft + 'px';
   navIndicator.style.width = link.offsetWidth + 'px';
 }
@@ -53,6 +60,7 @@ function switchTab(id, updateHash = true) {
 
   const activePanel = document.getElementById(id);
   if (activePanel) activePanel.scrollTop = 0;
+  window.scrollTo(0, 0);
 
   if (updateHash && window.location.hash !== '#' + id) {
     history.pushState(null, '', '#' + id);
@@ -111,7 +119,20 @@ const typingEl = document.getElementById('typing');
 const phrases = ['web products.', 'clean interfaces.', 'full-stack apps.', 'better user flows.'];
 let phraseIndex = 0, charIndex = 0, deleting = false;
 
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
 function typeLoop() {
+  // Respect the OS setting: show one phrase and stop, rather than typing.
+  if (reduceMotion.matches) {
+    typingEl.textContent = phrases[0];
+    return;
+  }
+  // The typing line only exists on Home. Idle cheaply on the other tabs
+  // instead of retyping into a hidden panel forever.
+  if (!document.getElementById('home').classList.contains('active')) {
+    setTimeout(typeLoop, 400);
+    return;
+  }
   const current = phrases[phraseIndex];
   if (!deleting) {
     charIndex++;
@@ -133,37 +154,16 @@ function typeLoop() {
 }
 typeLoop();
 
-// ---------- Count-up stats ----------
-function animateStats(container) {
-  container.querySelectorAll('.stat-num').forEach(el => {
-    const target = parseInt(el.getAttribute('data-target'), 10);
-    const duration = 1100;
-    const start = performance.now();
-    function tick(now) {
-      const progress = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.round(target * eased);
-      if (progress < 1) requestAnimationFrame(tick);
-      else el.textContent = target;
-    }
-    requestAnimationFrame(tick);
-  });
-}
-animateStats(document.getElementById('home'));
-
-// ---------- Card tilt + spotlight ----------
+// ---------- Card spotlight ----------
+// The 3D tilt that used to live here was removed: it competed with the
+// spotlight for the same hover and animated numbers that never needed it.
 document.querySelectorAll('.card').forEach(card => {
   card.addEventListener('mousemove', (e) => {
+    if (reduceMotion.matches) return;
     const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    card.style.setProperty('--mx', x + 'px');
-    card.style.setProperty('--my', y + 'px');
-    const rotateY = ((x / rect.width) - 0.5) * 6;
-    const rotateX = ((y / rect.height) - 0.5) * -6;
-    card.style.transform = `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-2px)`;
+    card.style.setProperty('--mx', (e.clientX - rect.left) + 'px');
+    card.style.setProperty('--my', (e.clientY - rect.top) + 'px');
   });
-  card.addEventListener('mouseleave', () => { card.style.transform = ''; });
 });
 
 // ---------- Academic timeline accordion ----------
@@ -178,4 +178,7 @@ timelineToggle.addEventListener('click', () => {
 
 // ---------- Init ----------
 switchTab(window.location.hash.slice(1) || 'home', false);
-window.addEventListener('load', () => moveIndicator(document.querySelector('.nav-links a.active')));
+window.addEventListener('load', () => {
+  moveIndicator(document.querySelector('.nav-links a.active'));
+  window.scrollTo(0, 0);
+});
