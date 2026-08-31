@@ -229,6 +229,7 @@ const NO_TEXT = {
 
   'hero.eyebrow': 'Hei, velkommen til porteføljen min',
   'hero.role': 'Student, utvikler og gründer',
+  'hero.typingPrefix': 'Jeg bygger',
   'hero.bio': 'Jeg er utvikler og jobber hovedsakelig med <strong>programvareutvikling</strong> og <strong>UX</strong>, for tiden hos <strong>Renow AS</strong>.',
   'cta.work': 'Se arbeidet mitt',
   'cta.resume': 'Se CV-en min',
