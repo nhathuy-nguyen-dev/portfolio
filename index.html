@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nhat-Huy Nguyen | Portfolio</title>
-<meta name="description" content="Nhat-Huy Nguyen, software developer with a focus on UX, currently studying Applied Computer Technology at OsloMet.">
+<meta name="description" content="Nhat-Huy Nguyen, software developer with a focus on UX, currently studying Applied Computer Technology at OsloMet." id="metaDescription">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,19 +17,22 @@
   <div class="wrap nav-inner">
     <a href="#home" class="nav-name" data-nav>Nhat-Huy Nguyen</a>
     <nav class="nav-links" id="navLinks">
-      <a href="#home" data-nav class="active">Home</a>
-      <a href="#about" data-nav>About</a>
-      <a href="#experience" data-nav>Experience</a>
-      <a href="#education" data-nav>Education</a>
-      <a href="#work" data-nav>Work</a>
-      <a href="#skills" data-nav>Skills</a>
+      <a href="#home" data-nav class="active" data-i18n="nav.home">Home</a>
+      <a href="#about" data-nav data-i18n="nav.about">About</a>
+      <a href="#experience" data-nav data-i18n="nav.experience">Experience</a>
+      <a href="#education" data-nav data-i18n="nav.education">Education</a>
+      <a href="#work" data-nav data-i18n="nav.work">Work</a>
+      <a href="#skills" data-nav data-i18n="nav.skills">Skills</a>
       <span class="nav-indicator" id="navIndicator"></span>
     </nav>
     <div class="nav-right">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" data-i18n-aria="nav.themeAria">
         <span class="theme-icon" aria-hidden="true">◐</span>
       </button>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <button class="lang-toggle" id="langToggle" aria-label="Switch to Norwegian" type="button">
+        <span id="langCode">NO</span>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" data-i18n-aria="nav.menuAria">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -48,37 +51,37 @@
       </div>
 
       <div class="hero-copy">
-        <p class="eyebrow">Hello, welcome to my portfolio</p>
+        <p class="eyebrow" data-i18n="hero.eyebrow">Hello, welcome to my portfolio</p>
         <h1>Nhat-Huy Nguyen</h1>
-        <p class="role-tag">Student, Developer &amp; Entrepreneur</p>
+        <p class="role-tag" data-i18n="hero.role">Student, Developer &amp; Entrepreneur</p>
         <p class="typing-line">I build <span class="typing" id="typing"></span><span class="cursor">|</span></p>
 
-        <p class="bio">
+        <p class="bio" data-i18n="hero.bio">
           I'm a developer working mainly in <strong>software development</strong> and <strong>UX</strong>,
           currently at <strong>Renow AS</strong>.
         </p>
 
         <div class="cta-row">
-          <a href="#work" data-nav class="btn btn-outline">My work</a>
-          <a href="resume/CV2026.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View my resume</a>
+          <a href="#work" data-nav class="btn btn-outline" data-i18n="cta.work">My work</a>
+          <a href="resume/CV2026.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="cta.resume">View my resume</a>
         </div>
 
         <div class="cta-row">
-          <a href="https://www.linkedin.com/in/nhat-huy-nguyen-6588083a5/" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="LinkedIn profile">
+          <a href="https://www.linkedin.com/in/nhat-huy-nguyen-6588083a5/" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="LinkedIn profile" data-i18n-aria="social.linkedin">
             <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
           </a>
-          <a href="https://github.com/nhathuy-nguyen-dev" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub profile">
+          <a href="https://github.com/nhathuy-nguyen-dev" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub profile" data-i18n-aria="social.github">
             <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M12 .5c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.3-5.467-1.332-5.467-5.93 0-1.31.469-2.38 1.236-3.22-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.118 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.807 5.625-5.48 5.92.43.372.814 1.103.814 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.696.825.578C20.565 22.295 24 17.797 24 12.5c0-6.627-5.373-12-12-12z"/></svg>
           </a>
-          <a href="mailto:2005nhathuy@gmail.com" class="icon-btn" aria-label="Email me">
+          <a href="mailto:2005nhathuy@gmail.com" class="icon-btn" aria-label="Email me" data-i18n-aria="social.email">
             <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M2 4h20v16H2V4zm2 2.236V6h.001L12 12.5l7.999-6.264V6H4zM20 8.107l-7.386 5.788a1 1 0 01-1.228 0L4 8.107V18h16V8.107z"/></svg>
           </a>
         </div>
 
         <div class="stats-grid">
-          <div class="stat"><span class="stat-num">3</span><span class="stat-label">Languages spoken</span></div>
-          <div class="stat"><span class="stat-num">4</span><span class="stat-label">Featured projects</span></div>
-          <div class="stat"><span class="stat-num">3</span><span class="stat-label">Semester at OsloMet</span></div>
+          <div class="stat"><span class="stat-num">3</span><span class="stat-label" data-i18n="hero.stat.languages">Languages spoken</span></div>
+          <div class="stat"><span class="stat-num">4</span><span class="stat-label" data-i18n="hero.stat.projects">Featured projects</span></div>
+          <div class="stat"><span class="stat-num">3</span><span class="stat-label" data-i18n="hero.stat.semester">Semester at OsloMet</span></div>
         </div>
       </div>
     </div>
@@ -88,18 +91,18 @@
   <section class="tab-panel" id="about">
     <div class="wrap about-grid">
       <div class="about-photo">
-        <img src="aboutme.jpg" alt="Nhat-Huy talking with a recruiter at a career fair">
-        <p class="photo-caption">At a career fair, talking tech and opportunities.</p>
+        <img src="aboutme.jpg" alt="Nhat-Huy talking with a recruiter at a career fair" data-i18n-alt="about.photoAlt">
+        <p class="photo-caption" data-i18n="about.caption">At a career fair, talking tech and opportunities.</p>
       </div>
       <div class="story-block">
-        <h2 class="section-heading">About me</h2>
-        <p class="story-text">
+        <h2 class="section-heading" data-i18n="about.heading">About me</h2>
+        <p class="story-text" data-i18n="about.p1">
           I'm 21 years old, originally from Trondheim, and moved to Oslo to study Applied Computer Technology
           at OsloMet. I got my first taste of programming through the IT1 course in my final year of
           videregående. Since then it's been a rollercoaster, but the real turning point came when I started
           university and decided to take programming seriously.
         </p>
-        <p class="story-text">
+        <p class="story-text" data-i18n="about.p2">
           Through my studies I've developed a strong interest in programming, web development and digital
           solutions. Alongside my studies I work at Renow AS, where I contribute with SEO, client contact,
           marketing and adapting digital solutions. I'm motivated by learning new technologies, solving
@@ -113,8 +116,8 @@
   <section class="tab-panel" id="experience">
     <div class="wrap">
       <div class="block-head">
-        <h2 class="section-heading">Work experience</h2>
-        <p>The organizations and roles that have shaped my path so far.</p>
+        <h2 class="section-heading" data-i18n="exp.heading">Work experience</h2>
+        <p data-i18n="exp.sub">The organizations and roles that have shaped my path so far.</p>
       </div>
 
       <div class="timeline-cards">
@@ -123,16 +126,16 @@
             <div class="tcard-logo"><img src="logos/renow.jpg" alt="Renow AS logo"></div>
             <div>
               <h3>Renow AS</h3>
-              <p class="tcard-role">Marketing Manager</p>
+              <p class="tcard-role" data-i18n="exp.renow.role">Marketing Manager</p>
             </div>
             <div class="tcard-badges">
-              <span class="pill pill-olive">May 2026 to Present</span>
-              <span class="pill pill-clay">Oslo, Norway</span>
+              <span class="pill pill-olive" data-i18n="exp.renow.date">May 2026 to Present</span>
+              <span class="pill pill-clay" data-i18n="loc.oslo">Oslo, Norway</span>
             </div>
           </div>
-          <p>Client identification, market and competitor research, outreach and digital campaigns. Analyse website performance, SEO and ad results, and assist with web development and coding for client projects.</p>
+          <p data-i18n="exp.renow.desc">Client identification, market and competitor research, outreach and digital campaigns. Analyse website performance, SEO and ad results, and assist with web development and coding for client projects.</p>
           <div class="tag-row">
-            <span class="chip">SEO</span><span class="chip">Client Outreach</span><span class="chip">Web Development</span><span class="chip">Marketing</span>
+            <span class="chip">SEO</span><span class="chip" data-i18n="exp.tag.outreach">Client Outreach</span><span class="chip" data-i18n="exp.tag.webdev">Web Development</span><span class="chip" data-i18n="exp.tag.marketing">Marketing</span>
           </div>
         </article>
 
@@ -141,16 +144,16 @@
             <div class="tcard-logo"><img src="logos/oscar-jacobson.png" alt="Oscar Jacobson logo"></div>
             <div>
               <h3>Oscar Jacobson</h3>
-              <p class="tcard-role">Sales and Alterations Associate</p>
+              <p class="tcard-role" data-i18n="exp.oj.role">Sales and Alterations Associate</p>
             </div>
             <div class="tcard-badges">
-              <span class="pill pill-olive">Oct 2025 to Present</span>
-              <span class="pill pill-clay">Oslo, Norway</span>
+              <span class="pill pill-olive" data-i18n="exp.oj.date">Oct 2025 to Present</span>
+              <span class="pill pill-clay" data-i18n="loc.oslo">Oslo, Norway</span>
             </div>
           </div>
-          <p>Personalised customer service and styling advice on formalwear, tailoring, sales and stock management.</p>
+          <p data-i18n="exp.oj.desc">Personalised customer service and styling advice on formalwear, tailoring, sales and stock management.</p>
           <div class="tag-row">
-            <span class="chip">Customer Service</span><span class="chip">Tailoring</span><span class="chip">Sales</span>
+            <span class="chip" data-i18n="exp.tag.customerservice">Customer Service</span><span class="chip" data-i18n="exp.tag.tailoring">Tailoring</span><span class="chip" data-i18n="exp.tag.sales">Sales</span>
           </div>
         </article>
 
@@ -159,16 +162,16 @@
             <div class="tcard-logo"><img src="logos/forsvaret.jpg" alt="Norwegian Armed Forces emblem"></div>
             <div>
               <h3>Norwegian Armed Forces</h3>
-              <p class="tcard-role">Security Guard / Military Vehicle Driver</p>
+              <p class="tcard-role" data-i18n="exp.mil.role">Security Guard / Military Vehicle Driver</p>
             </div>
             <div class="tcard-badges">
-              <span class="pill pill-olive">Aug 2024 to Jun 2025</span>
-              <span class="pill pill-clay">Setermoen, Norway</span>
+              <span class="pill pill-olive" data-i18n="exp.mil.date">Aug 2024 to Jun 2025</span>
+              <span class="pill pill-clay" data-i18n="loc.setermoen">Setermoen, Norway</span>
             </div>
           </div>
-          <p>Operated and maintained military vehicles under strict safety regulations, plus security inspections and access control.</p>
+          <p data-i18n="exp.mil.desc">Operated and maintained military vehicles under strict safety regulations, plus security inspections and access control.</p>
           <div class="tag-row">
-            <span class="chip">Security</span><span class="chip">Operations</span><span class="chip">Teamwork</span>
+            <span class="chip" data-i18n="exp.tag.security">Security</span><span class="chip" data-i18n="exp.tag.operations">Operations</span><span class="chip" data-i18n="exp.tag.teamwork">Teamwork</span>
           </div>
         </article>
 
@@ -176,24 +179,24 @@
           <div class="tcard-head">
             <div class="tcard-logo">+</div>
             <div>
-              <h3>Earlier roles</h3>
+              <h3 data-i18n="exp.earlier.title">Earlier roles</h3>
               <p class="tcard-role">Thansen · Thon Hotel · Trønderblomst</p>
             </div>
             <div class="tcard-badges">
-              <span class="pill pill-olive">2022 to 2024</span>
-              <span class="pill pill-clay">Trondheim, Norway</span>
+              <span class="pill pill-olive" data-i18n="exp.earlier.date">2022 to 2024</span>
+              <span class="pill pill-clay" data-i18n="loc.trondheim">Trondheim, Norway</span>
             </div>
           </div>
-          <p>Customer service, table service and inventory management, building a foundation in communication and teamwork.</p>
+          <p data-i18n="exp.earlier.desc">Customer service, table service and inventory management, building a foundation in communication and teamwork.</p>
           <div class="tag-row">
-            <span class="chip">Customer Service</span><span class="chip">Reliability</span>
+            <span class="chip" data-i18n="exp.tag.customerservice">Customer Service</span><span class="chip" data-i18n="exp.tag.reliability">Reliability</span>
           </div>
         </article>
       </div>
 
       <div class="cta-banner">
-        <p>Interested in my full experience? Check out my detailed resume.</p>
-        <a href="resume/CV2026.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View my resume</a>
+        <p data-i18n="exp.cta.text">Interested in my full experience? Check out my detailed resume.</p>
+        <a href="resume/CV2026.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="cta.resume">View my resume</a>
       </div>
     </div>
   </section>
@@ -202,27 +205,27 @@
   <section class="tab-panel" id="education">
     <div class="wrap">
       <div class="block-head">
-        <h2 class="section-heading">Education</h2>
-        <p>My academic journey and the institutions that have shaped my knowledge.</p>
+        <h2 class="section-heading" data-i18n="edu.heading">Education</h2>
+        <p data-i18n="edu.sub">My academic journey and the institutions that have shaped my knowledge.</p>
       </div>
 
       <article class="edu-card">
         <div class="tcard-head">
           <div class="tcard-logo"><img src="logos/oslomet.png" alt="OsloMet logo"></div>
           <div>
-            <h3>Bachelor of Applied Computer Technology</h3>
-            <p class="tcard-role">OsloMet, Oslo Metropolitan University ↗</p>
+            <h3 data-i18n="edu.deg.title">Bachelor of Applied Computer Technology</h3>
+            <p class="tcard-role" data-i18n="edu.deg.inst">OsloMet, Oslo Metropolitan University ↗</p>
           </div>
           <div class="tcard-badges">
-            <span class="pill pill-olive">2025 to 2028</span>
-            <span class="pill pill-clay">Oslo, Norway</span>
+            <span class="pill pill-olive" data-i18n="edu.deg.date">2025 to 2028</span>
+            <span class="pill pill-clay" data-i18n="loc.oslo">Oslo, Norway</span>
           </div>
         </div>
-        <p>Designing and developing technological solutions with an emphasis on user-friendliness. Learning to apply computer technology to real user needs and build universally designed, inclusive digital solutions.</p>
-        <a href="https://www.oslomet.no/studier/tkd/anvendt-datateknologi" target="_blank" rel="noopener noreferrer" class="card-link">View program page ↗</a>
+        <p data-i18n="edu.deg.desc">Designing and developing technological solutions with an emphasis on user-friendliness. Learning to apply computer technology to real user needs and build universally designed, inclusive digital solutions.</p>
+        <a href="https://www.oslomet.no/studier/tkd/anvendt-datateknologi" target="_blank" rel="noopener noreferrer" class="card-link" data-i18n="edu.deg.link">View program page ↗</a>
 
         <button class="accordion-toggle" id="timelineToggle" aria-expanded="false" aria-controls="timelinePanel">
-          Academic timeline <span class="chevron">⌄</span>
+          <span data-i18n="edu.timeline.toggle">Academic timeline</span> <span class="chevron">⌄</span>
         </button>
 
         <div class="accordion-panel" id="timelinePanel">
@@ -231,22 +234,22 @@
               <li class="year-node done">
                 <span class="year-dot">1</span>
                 <div class="year-content">
-                  <h4>1st year, foundation <em>2025 to 2026</em></h4>
+                  <h4 data-i18n="edu.y1.h4">1st year, foundation <em>2025 to 2026</em></h4>
                   <div class="sem">
-                    <p class="sem-label">1st semester</p>
+                    <p class="sem-label" data-i18n="edu.sem1">1st semester</p>
                     <ul>
-                      <li>Interaction Design &amp; Prototyping</li>
-                      <li>Programming</li>
-                      <li>Technology &amp; Society</li>
-                      <li>Web Development &amp; Inclusive Design</li>
+                      <li data-i18n="edu.c.interaction">Interaction Design &amp; Prototyping</li>
+                      <li data-i18n="edu.c.programming">Programming</li>
+                      <li data-i18n="edu.c.techsociety">Technology &amp; Society</li>
+                      <li data-i18n="edu.c.webdev">Web Development &amp; Inclusive Design</li>
                     </ul>
                   </div>
                   <div class="sem">
-                    <p class="sem-label">2nd semester</p>
+                    <p class="sem-label" data-i18n="edu.sem2">2nd semester</p>
                     <ul>
-                      <li>Rapid Development with Scripting Languages</li>
-                      <li>Databases</li>
-                      <li>Web Programming</li>
+                      <li data-i18n="edu.c.rapiddev">Rapid Development with Scripting Languages</li>
+                      <li data-i18n="edu.c.databases">Databases</li>
+                      <li data-i18n="edu.c.webprog">Web Programming</li>
                     </ul>
                   </div>
                 </div>
@@ -255,21 +258,21 @@
               <li class="year-node current">
                 <span class="year-dot">2</span>
                 <div class="year-content">
-                  <h4>2nd year, specialization <em>2026 to 2027</em></h4>
+                  <h4 data-i18n="edu.y2.h4">2nd year, specialization <em>2026 to 2027</em></h4>
                   <div class="sem">
-                    <p class="sem-label">3rd semester <span class="tag-inprogress">In progress</span></p>
+                    <p class="sem-label"><span data-i18n="edu.sem3">3rd semester</span> <span class="tag-inprogress" data-i18n="edu.inprogress">In progress</span></p>
                     <ul>
-                      <li>Human-Computer Interaction</li>
-                      <li>System Development</li>
-                      <li>Specialization Track (Health Technology / HCI / Innovation / Programming)</li>
+                      <li data-i18n="edu.c.hci">Human-Computer Interaction</li>
+                      <li data-i18n="edu.c.sysdev">System Development</li>
+                      <li><span data-i18n="edu.c.algorithms">Algorithms &amp; Data Structures</span> <span class="tag-track" data-i18n="edu.track.programming">Programming track</span></li>
                     </ul>
                   </div>
                   <div class="sem">
-                    <p class="sem-label">4th semester</p>
+                    <p class="sem-label" data-i18n="edu.sem4">4th semester</p>
                     <ul>
-                      <li>Visualization</li>
-                      <li>Software Testing</li>
-                      <li>Specialization Project</li>
+                      <li data-i18n="edu.c.visualization">Visualization</li>
+                      <li data-i18n="edu.c.testing">Software Testing</li>
+                      <li><span data-i18n="edu.c.os">Operating Systems</span> <span class="tag-track" data-i18n="edu.track.programming">Programming track</span></li>
                     </ul>
                   </div>
                 </div>
@@ -278,21 +281,21 @@
               <li class="year-node">
                 <span class="year-dot">3</span>
                 <div class="year-content">
-                  <h4>3rd year, advanced studies <em>2027 to 2028</em></h4>
+                  <h4 data-i18n="edu.y3.h4">3rd year, advanced studies <em>2027 to 2028</em></h4>
                   <div class="sem">
-                    <p class="sem-label">5th semester</p>
+                    <p class="sem-label" data-i18n="edu.sem5">5th semester</p>
                     <ul>
-                      <li>Data Security</li>
-                      <li>Universal ICT Design</li>
-                      <li>Advanced Specialization Courses</li>
+                      <li data-i18n="edu.c.datasecurity">Data Security</li>
+                      <li data-i18n="edu.c.icd">Universal ICT Design</li>
+                      <li data-i18n="edu.c.advspec">Advanced Specialization Courses</li>
                     </ul>
                   </div>
                   <div class="sem">
-                    <p class="sem-label">6th semester</p>
+                    <p class="sem-label" data-i18n="edu.sem6">6th semester</p>
                     <ul>
-                      <li>Bachelor's Thesis (20 ECTS)</li>
-                      <li>Network &amp; Cloud Services</li>
-                      <li>Advanced Programming</li>
+                      <li data-i18n="edu.c.thesis">Bachelor's Thesis (20 ECTS)</li>
+                      <li data-i18n="edu.c.network">Network &amp; Cloud Services</li>
+                      <li data-i18n="edu.c.advprog">Advanced Programming</li>
                     </ul>
                   </div>
                 </div>
@@ -310,8 +313,8 @@
             <p class="tcard-role">Heimdal VGS</p>
           </div>
           <div class="tcard-badges">
-            <span class="pill pill-olive">2021 to 2024</span>
-            <span class="pill pill-clay">Trondheim, Norway</span>
+            <span class="pill pill-olive" data-i18n="edu.vgs.date">2021 to 2024</span>
+            <span class="pill pill-clay" data-i18n="loc.trondheim">Trondheim, Norway</span>
           </div>
         </div>
       </article>
@@ -322,42 +325,42 @@
   <section class="tab-panel" id="work">
     <div class="wrap">
       <div class="block-head">
-        <h2 class="section-heading">Selected work</h2>
-        <p>Case studies from client work and coursework.</p>
+        <h2 class="section-heading" data-i18n="work.heading">Selected work</h2>
+        <p data-i18n="work.sub">Case studies from client work and coursework.</p>
       </div>
 
       <div class="card-grid">
         <article class="card">
           <p class="card-tag">Renow AS</p>
-          <h3>Designing around small-business needs</h3>
-          <p class="card-role">Web &amp; Business Development, Marketing Manager</p>
-          <p>Renow delivers websites, visibility and ongoing support to small and medium-sized businesses. I work on client discovery, tailored proposals, project coordination, SEO and analytics framing, and support implementation when the team needs extra capacity.</p>
-          <p class="card-detail"><strong>Process:</strong> listen, prioritise, build, improve.</p>
+          <h3 data-i18n="work.c1.title">Designing around small-business needs</h3>
+          <p class="card-role" data-i18n="work.c1.role">Web &amp; Business Development, Marketing Manager</p>
+          <p data-i18n="work.c1.desc">Renow delivers websites, visibility and ongoing support to small and medium-sized businesses. I work on client discovery, tailored proposals, project coordination, SEO and analytics framing, and support implementation when the team needs extra capacity.</p>
+          <p class="card-detail" data-i18n="work.c1.detail"><strong>Process:</strong> listen, prioritise, build, improve.</p>
           <a href="https://renow.no" target="_blank" rel="noopener noreferrer" class="card-link">renow.no ↗</a>
         </article>
 
         <article class="card">
           <p class="card-tag">Renow AS</p>
-          <h3>One concept, two canvases</h3>
-          <p class="card-role">Responsive campaign design</p>
-          <p>The brief was to preserve Renow's summer campaign concept while adapting it for a phone-first format. A desktop composition can't just be scaled down: on a narrow screen, hierarchy, reading order and image balance all have to be rebuilt.</p>
-          <p class="card-quote">Responsive design is a prioritisation exercise: preserve the message, then reshape the experience for its context.</p>
+          <h3 data-i18n="work.c2.title">One concept, two canvases</h3>
+          <p class="card-role" data-i18n="work.c2.role">Responsive campaign design</p>
+          <p data-i18n="work.c2.desc">The brief was to preserve Renow's summer campaign concept while adapting it for a phone-first format. A desktop composition can't just be scaled down: on a narrow screen, hierarchy, reading order and image balance all have to be rebuilt.</p>
+          <p class="card-quote" data-i18n="work.c2.quote">Responsive design is a prioritisation exercise: preserve the message, then reshape the experience for its context.</p>
         </article>
 
         <article class="card">
-          <p class="card-tag">Coursework</p>
-          <h3>Full-stack media application</h3>
+          <p class="card-tag" data-i18n="work.tag.coursework">Coursework</p>
+          <h3 data-i18n="work.c3.title">Full-stack media application</h3>
           <p class="card-role">JavaScript, Spring Boot, REST APIs</p>
-          <p>Developed frontend functionality and connected it to REST endpoints for retrieving and managing songs, films and books.</p>
-          <p class="card-flow">User interface → fetch request → API controller → data repository</p>
+          <p data-i18n="work.c3.desc">Developed frontend functionality and connected it to REST endpoints for retrieving and managing songs, films and books.</p>
+          <p class="card-flow" data-i18n="work.c3.flow">User interface → fetch request → API controller → data repository</p>
         </article>
 
         <article class="card">
-          <p class="card-tag">Coursework</p>
-          <h3>Bicycle rental database</h3>
+          <p class="card-tag" data-i18n="work.tag.coursework">Coursework</p>
+          <h3 data-i18n="work.c4.title">Bicycle rental database</h3>
           <p class="card-role">PostgreSQL, SQL, Docker</p>
-          <p>Designed a relational model for customers, bicycles, stations, locks and rentals, then translated the relationships into SQL queries.</p>
-          <p class="card-flow">Customer → rental → bicycle → station → lock</p>
+          <p data-i18n="work.c4.desc">Designed a relational model for customers, bicycles, stations, locks and rentals, then translated the relationships into SQL queries.</p>
+          <p class="card-flow" data-i18n="work.c4.flow">Customer → rental → bicycle → station → lock</p>
         </article>
       </div>
     </div>
@@ -367,51 +370,47 @@
   <section class="tab-panel" id="skills">
     <div class="wrap">
       <div class="block-head">
-        <h2 class="section-heading">Skills &amp; technologies</h2>
-        <div class="legend">
-          <span><i class="dot dot-expert"></i>Expert</span>
-          <span><i class="dot dot-mid"></i>Intermediate</span>
-        </div>
+        <h2 class="section-heading" data-i18n="skills.heading">Skills &amp; technologies</h2>
       </div>
 
       <div class="skills-cards">
         <div class="skill-card">
-          <h3>Languages &amp; frameworks</h3>
+          <h3 data-i18n="skills.cat.lang">Languages &amp; frameworks</h3>
           <ul class="tech-grid">
-            <li class="tech lvl-expert"><img src="logos/html5.webp" alt="" width="40" height="40" loading="lazy"><span>HTML</span></li>
-            <li class="tech lvl-expert"><img src="logos/css3.webp" alt="" width="40" height="40" loading="lazy"><span>CSS</span></li>
-            <li class="tech lvl-expert"><img src="logos/java.webp" alt="" width="40" height="40" loading="lazy"><span>Java</span></li>
-            <li class="tech lvl-mid"><img src="logos/python.webp" alt="" width="40" height="40" loading="lazy"><span>Python</span></li>
-            <li class="tech lvl-mid"><img src="logos/javascript.webp" alt="" width="40" height="40" loading="lazy"><span>JavaScript</span></li>
-            <li class="tech lvl-mid"><img src="logos/spring-boot.webp" alt="" width="40" height="40" loading="lazy"><span>Spring Boot</span></li>
+            <li class="tech"><img src="logos/html5.webp" alt="" width="40" height="40" loading="lazy"><span>HTML</span></li>
+            <li class="tech"><img src="logos/css3.webp" alt="" width="40" height="40" loading="lazy"><span>CSS</span></li>
+            <li class="tech"><img src="logos/java.webp" alt="" width="40" height="40" loading="lazy"><span>Java</span></li>
+            <li class="tech"><img src="logos/python.webp" alt="" width="40" height="40" loading="lazy"><span>Python</span></li>
+            <li class="tech"><img src="logos/javascript.webp" alt="" width="40" height="40" loading="lazy"><span>JavaScript</span></li>
+            <li class="tech"><img src="logos/spring-boot.webp" alt="" width="40" height="40" loading="lazy"><span>Spring Boot</span></li>
           </ul>
         </div>
         <div class="skill-card">
-          <h3>Data &amp; infrastructure</h3>
+          <h3 data-i18n="skills.cat.data">Data &amp; infrastructure</h3>
           <ul class="tech-grid">
-            <li class="tech lvl-mid"><img src="logos/sql.webp" alt="" width="40" height="40" loading="lazy"><span>SQL</span></li>
-            <li class="tech lvl-mid"><img src="logos/postgresql.webp" alt="" width="40" height="40" loading="lazy"><span>PostgreSQL</span></li>
-            <li class="tech lvl-mid"><img src="logos/docker.webp" alt="" width="40" height="40" loading="lazy"><span>Docker</span></li>
-            <li class="tech lvl-expert"><img src="logos/git.webp" alt="" width="40" height="40" loading="lazy"><span>Git</span></li>
-            <li class="tech lvl-expert"><img src="logos/github.svg" alt="" width="40" height="40" loading="lazy"><span>GitHub</span></li>
+            <li class="tech"><img src="logos/sql.webp" alt="" width="40" height="40" loading="lazy"><span>SQL</span></li>
+            <li class="tech"><img src="logos/postgresql.webp" alt="" width="40" height="40" loading="lazy"><span>PostgreSQL</span></li>
+            <li class="tech"><img src="logos/docker.webp" alt="" width="40" height="40" loading="lazy"><span>Docker</span></li>
+            <li class="tech"><img src="logos/git.webp" alt="" width="40" height="40" loading="lazy"><span>Git</span></li>
+            <li class="tech"><img src="logos/github.svg" alt="" width="40" height="40" loading="lazy"><span>GitHub</span></li>
           </ul>
         </div>
       </div>
 
       <div class="soft-skills">
-        <span class="chip chip-rust">Object-Oriented Programming</span>
-        <span class="chip chip-rust">Relational Databases</span>
-        <span class="chip chip-rust">Full-Stack Development</span>
-        <span class="chip chip-rust">Problem Solving</span>
-        <span class="chip chip-rust">Teamwork</span>
+        <span class="chip chip-rust" data-i18n="skills.soft.oop">Object-Oriented Programming</span>
+        <span class="chip chip-rust" data-i18n="skills.soft.db">Relational Databases</span>
+        <span class="chip chip-rust" data-i18n="skills.soft.fullstack">Full-Stack Development</span>
+        <span class="chip chip-rust" data-i18n="skills.soft.problem">Problem Solving</span>
+        <span class="chip chip-rust" data-i18n="skills.soft.team">Teamwork</span>
       </div>
 
       <div class="skill-card lang-card">
-        <h3>Languages spoken</h3>
+        <h3 data-i18n="skills.langheading">Languages spoken</h3>
         <ul class="tags">
-          <li class="lvl-expert">Norwegian</li>
-          <li class="lvl-expert">English</li>
-          <li class="lvl-expert">Vietnamese</li>
+          <li data-i18n="skills.lang.no">Norwegian</li>
+          <li data-i18n="skills.lang.en">English</li>
+          <li data-i18n="skills.lang.vi">Vietnamese</li>
         </ul>
       </div>
     </div>
@@ -424,12 +423,12 @@
   <div class="wrap footer-inner">
     <p>© 2026 Nhat-Huy Nguyen</p>
     <div class="dot-nav" id="dotNav">
-      <button class="dot active" data-nav-dot="home" aria-label="Go to Home"></button>
-      <button class="dot" data-nav-dot="about" aria-label="Go to About"></button>
-      <button class="dot" data-nav-dot="experience" aria-label="Go to Experience"></button>
-      <button class="dot" data-nav-dot="education" aria-label="Go to Education"></button>
-      <button class="dot" data-nav-dot="work" aria-label="Go to Work"></button>
-      <button class="dot" data-nav-dot="skills" aria-label="Go to Skills"></button>
+      <button class="dot active" data-nav-dot="home" aria-label="Go to Home" data-i18n-aria="dot.home"></button>
+      <button class="dot" data-nav-dot="about" aria-label="Go to About" data-i18n-aria="dot.about"></button>
+      <button class="dot" data-nav-dot="experience" aria-label="Go to Experience" data-i18n-aria="dot.experience"></button>
+      <button class="dot" data-nav-dot="education" aria-label="Go to Education" data-i18n-aria="dot.education"></button>
+      <button class="dot" data-nav-dot="work" aria-label="Go to Work" data-i18n-aria="dot.work"></button>
+      <button class="dot" data-nav-dot="skills" aria-label="Go to Skills" data-i18n-aria="dot.skills"></button>
     </div>
   </div>
 </footer>
